@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VU_KNF_Word_Counter</string>
+
+    <string-array name="spinner_options">
+        <item>Chars</item>
+        <item>Words</item>
+    </string-array>
+</resources>
