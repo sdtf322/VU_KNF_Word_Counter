@@ -4,11 +4,11 @@ class WordCounter {
 
     fun countWords(inputString : String) : String {
         val trimmedString = inputString.trim()
-
+        val words = "Words"
         return if(trimmedString.isEmpty()) {
-            "0"
+            "0 $words"
         } else {
-            trimmedString.split("\\s+".toRegex()).size.toString()
+            trimmedString.split("\\s+".toRegex()).size.toString() + " $words"
         }
     }
 

@@ -37,16 +37,8 @@ class MainActivity : AppCompatActivity() {
             val userString = etInput.text.toString()
             val spinnerChoice = spCounter.selectedItem.toString()
 
-            if(userString.isEmpty()) {
-                Toast.makeText(
-                    this, spinnerChoice, Toast.LENGTH_LONG)
-                    .show()
-                resultText.text = "0"
-            }
-
-            else if(spinnerChoice == "Words") {
+            if(spinnerChoice == "Words") {
                 resultText.text = wordCounter.countWords(userString)
-
             }
 
             else if(spinnerChoice == "Chars") {
