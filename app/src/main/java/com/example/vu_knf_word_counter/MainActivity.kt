@@ -15,11 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val etInput = findViewById<EditText>(R.id.etInputText)
-        val countButton = findViewById<Button>(R.id.btnCount)
-        val spCounter = findViewById<Spinner>(R.id.spCounter)
-        val resultText = findViewById<TextView>(R.id.tvResult)
-
         val optionsList = arrayOf(
             "Words",
             "Chars"
@@ -31,7 +26,13 @@ class MainActivity : AppCompatActivity() {
             optionsList
         )
 
+        val spCounter = findViewById<Spinner>(R.id.spCounter)
+
         spCounter.adapter = arrayAdapter
+
+        val etInput = findViewById<EditText>(R.id.etInputText)
+        val countButton = findViewById<Button>(R.id.btnCount)
+        val resultText = findViewById<TextView>(R.id.tvResult)
 
         countButton.setOnClickListener {
             val userString = etInput.text.toString()

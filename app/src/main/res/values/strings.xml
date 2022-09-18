@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">VU_KNF_Word_Counter</string>
+    <string name="result">Result</string>
+    <string name="show_result">Show result</string>
+    <string name="text">Text</string>
+    <string name="enter_a_text">Enter a text</string>
+    <string name="choose_counter">Choose counter</string>
 
     <string-array name="spinner_options">
         <item>Chars</item>
