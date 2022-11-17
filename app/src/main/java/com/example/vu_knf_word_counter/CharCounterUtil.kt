@@ -4,11 +4,14 @@ class CharCounterUtil {
 
     fun countChars (inputString : String) : String {
 
-        val chars = "Chars"
         return if(inputString.isEmpty()) {
-            "0 $chars"
+            "0 $CHARS"
         } else {
-            inputString.length.toString() + " $chars"
+            inputString.length.toString() + " $CHARS"
         }
+    }
+
+    companion object {
+        private const val CHARS = "Chars"
     }
 }

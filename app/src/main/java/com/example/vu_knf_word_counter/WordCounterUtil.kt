@@ -4,11 +4,14 @@ class WordCounterUtil {
 
     fun countWords(inputString : String) : String {
         val trimmedString = inputString.trim()
-        val words = "Words"
         return if(trimmedString.isEmpty()) {
-            "0 $words"
+            "0 $WORDS"
         } else {
-            trimmedString.split("\\s+".toRegex()).size.toString() + " $words"
+            trimmedString.split("\\s+".toRegex()).size.toString() + " $WORDS"
         }
+    }
+
+    companion object {
+        private const val WORDS = "Words"
     }
 }
