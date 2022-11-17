@@ -8,8 +8,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var arrayAdapter: ArrayAdapter<String>
 
-    private val charCounter by lazy { CharCounter() }
-    private val wordCounter by lazy { WordCounter() }
+    private val charCounterUtil by lazy { CharCounterUtil() }
+    private val wordCounterUtil by lazy { WordCounterUtil() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,11 +39,11 @@ class MainActivity : AppCompatActivity() {
             val spinnerChoice = spCounter.selectedItem.toString()
 
             if(spinnerChoice == "Words") {
-                resultText.text = wordCounter.countWords(userString)
+                resultText.text = wordCounterUtil.countWords(userString)
             }
 
             else if(spinnerChoice == "Chars") {
-                resultText.text = charCounter.countChars(userString)
+                resultText.text = charCounterUtil.countChars(userString)
             }
 
         }

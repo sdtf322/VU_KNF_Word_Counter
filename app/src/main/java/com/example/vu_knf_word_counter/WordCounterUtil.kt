@@ -1,6 +1,6 @@
 package com.example.vu_knf_word_counter
 
-class WordCounter {
+class WordCounterUtil {
 
     fun countWords(inputString : String) : String {
         val trimmedString = inputString.trim()
@@ -11,5 +11,4 @@ class WordCounter {
             trimmedString.split("\\s+".toRegex()).size.toString() + " $words"
         }
     }
-
 }

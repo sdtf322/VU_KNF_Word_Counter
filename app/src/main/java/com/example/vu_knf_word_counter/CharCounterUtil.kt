@@ -1,6 +1,6 @@
 package com.example.vu_knf_word_counter
 
-class CharCounter {
+class CharCounterUtil {
 
     fun countChars (inputString : String) : String {
 
