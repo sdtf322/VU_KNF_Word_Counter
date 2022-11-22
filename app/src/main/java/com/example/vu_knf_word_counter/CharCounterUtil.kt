@@ -1,13 +1,17 @@
 package com.example.vu_knf_word_counter
 
+import android.content.Context
+import android.widget.Toast
+
 class CharCounterUtil {
 
-    fun countChars (inputString : String) : String {
+    fun countChars (inputString : String, contextExample : Context) : String {
 
-        return if(inputString.isEmpty()) {
-            "0 $CHARS"
+        if(inputString.isEmpty()) {
+            Toast.makeText(contextExample, "Please enter a valid text!", Toast.LENGTH_LONG).show()
+            return "0 $CHARS"
         } else {
-            inputString.length.toString() + " $CHARS"
+            return inputString.length.toString() + " $CHARS"
         }
     }
 
