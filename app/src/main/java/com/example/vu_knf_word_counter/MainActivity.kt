@@ -39,11 +39,11 @@ class MainActivity : AppCompatActivity() {
             val spinnerChoice = spCounter.selectedItem.toString()
 
             if(spinnerChoice == "Words") {
-                resultText.text = wordCounterUtil.countWords(userString, this)
+                resultText.text = wordCounterUtil.countWords(userString)
             }
 
             else if(spinnerChoice == "Chars") {
-                resultText.text = charCounterUtil.countChars(userString, this)
+                resultText.text = charCounterUtil.countChars(userString)
             }
 
         }
